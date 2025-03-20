@@ -1,0 +1,23 @@
+Setting Up ESP32 in Arduino IDE
+Before you start, you need to install the ESP32 board package in the Arduino IDE.
+
+Step 1: Install ESP32 Board in Arduino IDE
+Open Arduino IDE.
+Go to File → Preferences.
+In the Additional Board Manager URLs, paste this: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+Click OK.
+Now, go to Tools → Board → Boards Manager.
+Search for ESP32 and install the latest ESP32 by Espressif Systems package.
+
+Step 2: Select ESP32 Wrover Module
+
+Step 3: Install ESP32 Drivers (Fix Missing COM Port)
+🔹 If the port is not showing in Device Manager, reinstall the USB driver.
+
+  For CP2102-based ESP32 Boards (Most Common)
+Download the latest CP210x USB to UART Bridge VCP Driver from:
+https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
+Go to Download section and Install it and restart your PC.
+
+If your port is not being detected,
+Go to your Device Manager -> Ports -> Silicon Labs CP210X USB to UART Bridge(COM Number)
