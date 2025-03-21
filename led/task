@@ -1,3 +1,4 @@
 Control LED Using a Push Button
 ->Connect the buzzer to any GPIO pin of your choice
 
+LED Blinks Based on Serial Input
