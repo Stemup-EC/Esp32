@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Vyshak T M",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 24.04, "attrs": {} },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "gas1",
+      "top": 108.3,
+      "left": -156.2,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -51.6,
+      "left": -44.2,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "gas1:AOUT", "esp:34", "green", [ "v31.7", "h91.9", "v-172.8" ] ],
+    [ "gas1:VCC", "esp:3V3", "red", [ "v12.5", "h-22.4", "v-192" ] ],
+    [ "gas1:GND", "esp:GND.1", "black", [ "v12.5", "h92.7", "v-67.2" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "esp:26", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
